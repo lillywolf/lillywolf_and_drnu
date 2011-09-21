@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;	import helpers.PlayerButton;		public class Mp3PlayerNextBtn extends PlayerButton {						public function Mp3PlayerNextBtn() {			// constructor code			super();		}	}	}

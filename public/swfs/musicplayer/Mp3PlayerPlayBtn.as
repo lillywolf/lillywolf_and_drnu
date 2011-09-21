@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;	import helpers.PlayerButton;	import flash.events.MouseEvent;		public class Mp3PlayerPlayBtn extends PlayerButton {						public function Mp3PlayerPlayBtn() {			// constructor code			super();		}	}	}

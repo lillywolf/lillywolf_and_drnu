@@ -1,0 +1,1 @@
+﻿package  {	import flash.events.Event;		public class ChangeEvent extends Event {				public static const SELECTED:String = "selected";		public function ChangeEvent() {			// constructor code			super();		}	}	}

@@ -1,0 +1,1 @@
+﻿package  {		import flash.display.MovieClip;			public class Mp3PlayerPlaylistItemBg extends MovieClip {				public var _time:int;		public function Mp3PlayerPlaylistItemBg() {			// constructor code			super();		}				public function set time(val:int):void		{			_time = val;		}				public function get time():int		{			return _time;		}	}	}
