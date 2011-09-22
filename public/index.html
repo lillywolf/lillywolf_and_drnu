@@ -5,19 +5,21 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <style type="text/css" media="screen">
       body {
-        margin: 0;
-        margin-bottom: 25px;
+        margin: 0px 0 25px 0;
         padding: 0;
         background-color: #000000;
-		background-image: "images/bg.png";
+		background-image: url("images/bg.png");
+        background-repeat: no-repeat;	
+		background-position: 50% 33%;
         font-family: "Verdana";
         font-size: 13px;
         color: #ffffff;
+		width: 1338px;
       }
       
-      h1 {
-        font-size: 28px;
-        color: #000;
+      #player {
+        float: left;
+        margin: 150px 0 0 240px;
       }
       
       a  {color: #03c}
@@ -27,22 +29,10 @@
         text-decoration: none;
       }
       
-      
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
+      #logo {
+        margin: 30px auto;
+        width: 100%;
+		text-align: center;
       }
       
       #sidebar {
@@ -52,66 +42,17 @@
 
       #footer {
         clear: both;
-      }
-      
+      }    
 
       #header, #about, #getting-started {
         padding-left: 75px;
         padding-right: 30px;
       }
 
-
       #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
       }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-      
-      
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -11px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-      
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-      
       
       #getting-started {
-        border-top: 1px solid #ccc;
         margin-top: 25px;
         padding-top: 15px;
       }
@@ -181,25 +122,7 @@
     <script type="text/javascript" src="javascripts/prototype.js"></script>
     <script type="text/javascript" src="javascripts/effects.js"></script>
     <script type="text/javascript">
-      function about() {
-        if (Element.empty('about-content')) {
-          new Ajax.Updater('about-content', 'rails/info/properties', {
-            method:     'get',
-            onFailure:  function() {Element.classNames('about-content').add('failure')},
-            onComplete: function() {new Effect.BlindDown('about-content', {duration: 0.25})}
-          });
-        } else {
-          new Effect[Element.visible('about-content') ? 
-            'BlindUp' : 'BlindDown']('about-content', {duration: 0.25});
-        }
-      }
-      
-      window.onload = function() {
-        $('search-text').value = '';
-        $('search').onsubmit = function() {
-          $('search-text').value = 'site:rubyonrails.org ' + $F('search-text');
-        }
-      }
+
     </script>
   </head>
   <body>
@@ -209,14 +132,47 @@
       </div>
 
       <div id="content">
-        <div id="header">
- 
+        <div id="logo">
+ 			<img src="images/logo.png" />
         </div>
 
-        <div id="about">
-          <!-- <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-           <div id="about-content" style="display: none"></div>
-   -->  </div>
+        <div id="player">
+			<div id="flashContent">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="306" height="246" id="lillywolf_player" align="middle">
+					<param name="movie" value="swfs/musicplayer/lillywolf_player.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#000000" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="window" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+					<!--[if !IE]>-->
+					<object type="application/x-shockwave-flash" data="swfs/musicplayer/lillywolf_player.swf" width="306" height="246">
+						<param name="movie" value="swfs/musicplayer/lillywolf_player.swf" />
+						<param name="quality" value="high" />
+						<param name="bgcolor" value="#000000" />
+						<param name="play" value="true" />
+						<param name="loop" value="true" />
+						<param name="wmode" value="window" />
+						<param name="scale" value="showall" />
+						<param name="menu" value="true" />
+						<param name="devicefont" value="false" />
+						<param name="salign" value="" />
+						<param name="allowScriptAccess" value="sameDomain" />
+					<!--<![endif]-->
+						<a href="http://www.adobe.com/go/getflash">
+							<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+						</a>
+					<!--[if !IE]>-->
+					</object>
+					<!--<![endif]-->
+				</object>
+			</div>
+   		</div>
         
         <div id="getting-started">
 		</div>
