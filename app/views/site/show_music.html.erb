@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<style>
+			#songs {
+				margin-top: -25px;
+			}
+			.song {
+				float: left;
+				margin: 25px 0 0 0;
+			}
+			.title {
+				text-align: left;
+				float: left;
+				margin: 0 0 8px 0px;
+			}
+			.title a {
+				color: #4AFFC3;
+			}
+			.fb_like {
+				float: left;
+				margin: 10px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="songs">
+		
+			<% @songs.each do |song| %>
+			<div class="song">
+		
+				<% @sc_swfurl = song.sc_swfurl_1 %>
+		
+				<div class="title"><%= link_to song.title, "http://soundcloud.com/lillywolf/" + song.url_ext %></a></div> 		
+				<object height="81" width="100%"> <param name="movie" value=<%="#{@sc_swfurl}"%>></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src=<%="#{@sc_swfurl}"%> type="application/x-shockwave-flash" width="100%"></embed> </object>	
+		
+				<% @url_ext = "http://soundcloud.com/lillywolf/" + song.url_ext %>
+		
+				<div class="fb_like">
+					<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) {return;}
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+					<div class="fb-like" data-href=<%= "#{@url_ext}" %> data-colorscheme="dark" data-send="true" data-width="450" data-show-faces="false" data-font="verdana"></div>
+				</div>
+		
+			</div>	
+			<% end %>
+			
+		</div>	
+	</body>
+</html>	

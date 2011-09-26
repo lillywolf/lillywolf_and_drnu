@@ -1,0 +1,60 @@
+<html>
+	<head>
+	    <style type="text/css" media="screen">
+		    #shows {
+		      	font-family: "Verdana";
+		      	font-size: 13px;
+		    	color: #ffffff;
+				margin: -18px 0 0 20px;
+		    }
+			.show {
+				clear: both;
+				float: left;
+				margin-top: 18px;
+			}
+			.date {
+				color: #FF0049;
+			}
+			.show_divider {
+				padding: 0px 10px;
+			}
+			.venue {
+				color: #4AFFC3;
+			}
+			.location {
+				
+			}
+			.line1 div, .line1 a, .line2 div {
+				float: left;
+				text-align: left;
+			}
+			.line1 {
+				clear: both;
+				float: left;
+			}
+			.line2 {
+				clear: both;
+				float: left;
+				margin: 2px 0 0 0;
+			}
+		</style>
+	</head>	
+	<body>
+		<div id="shows">
+			<% @shows.each do |show| %>
+				<div class="show">
+					<div class="line1">
+						<div class="date"><%= show.date %></div>
+						<div class="show_divider">::</div>
+						<a class="venue"><%= show.venue %></a>
+						<div class="show_divider">::</div>
+						<div class="location"><%= show.location %></div>
+					</div>
+					<div class="line2">	
+						<div class="time"><%= show.details %></div>
+					</div>	
+				</div>	
+			<% end %>	
+		</div>
+	</body>
+</html>	

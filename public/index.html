@@ -5,22 +5,45 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <style type="text/css" media="screen">
       body {
-        margin: 0px 0 25px 0;
         padding: 0;
         background-color: #000000;
 		background-image: url("images/bg.png");
         background-repeat: no-repeat;	
-		background-position: 50% 33%;
+		background-position: 50% -317px;
         font-family: "Verdana";
         font-size: 13px;
         color: #ffffff;
-		width: 1338px;
       }
+
+	  #page {
+		margin: 0 auto;
+	  }
+
+	  #content {
+		margin: 0 auto;
+	  }
+	
+	  #body_content {
+		margin: 80px auto;
+		text-align: center;
+		width: 850px;
+	  }
       
       #player {
-        float: left;
-        margin: 150px 0 0 240px;
+        /* margin: 85px 0 0 200px; */
+		width: 310px;
       }
+
+	  #fb_stuff {
+		width: 310px;
+		margin-top: 50px;
+	  }
+
+	  #twitter {
+		clear: left;
+		width: 310px;
+		margin: 45px 0 0 0;
+	  }
       
       a  {color: #03c}
       a:hover {
@@ -33,6 +56,8 @@
         margin: 30px auto;
         width: 100%;
 		text-align: center;
+		height: 158px;
+		padding: 0 0 0 5px;
       }
       
       #sidebar {
@@ -40,83 +65,67 @@
         width: 175px;
       }
 
+	  #links {
+		margin: 0px auto;
+		width: 826px;
+		text-align: center;
+		height: 18px;
+	  }
+
+	  .link {
+		float: left;
+		height: 18px;
+	  }
+	
+	  #toplink_music {
+		background-image: url("images/links/link_music.png");
+		background-repeat: no-repeat;
+		width: 87px;
+		margin-left: 0px;
+	  }
+	
+	  #toplink_shows {
+		background-image: url("images/links/link_shows.png");
+		background-repeat: no-repeat;		
+		width: 97px;
+		margin-left: 45px;
+	  }	
+	
+	  #toplink_facebook {
+		background-image: url("images/links/link_facebook.png");
+		background-repeat: no-repeat;		
+		width: 145px;
+		margin-left: 52px;
+	  }
+	
+	  #toplink_itunes {
+		background-image: url("images/links/link_itunes.png");
+		background-repeat: no-repeat;		
+		width: 94px;
+		margin-left: 52px;
+	  }	
+	
+	  #toplink_bio{
+		background-image: url("images/links/link_bio.png");
+		background-repeat: no-repeat;		
+		width: 44px;
+		margin-left: 57px;
+	  }	
+	
+	  #toplink_photos {
+		background-image: url("images/links/link_photos.png");
+		background-repeat: no-repeat;		
+		width: 108px;
+		margin-left: 45px;
+	  }	
+
       #footer {
         clear: both;
       }    
 
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+	  .twtr-widget {
+	  }
 
-      #header {
-      }
-      
-      #getting-started {
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-      
-      
-      #search {
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-      }
-      #search input {
-        font-size: 11px;
-        margin: 2px;
-      }
-      #search-text {width: 170px}
-      
-      
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
       
     </style>
     <script type="text/javascript" src="javascripts/prototype.js"></script>
@@ -127,55 +136,108 @@
   </head>
   <body>
     <div id="page">
-      <div id="sidebar">
-
-      </div>
-
       <div id="content">
         <div id="logo">
  			<img src="images/logo.png" />
         </div>
+		<div id="links">
+			<a class="link" id="toplink_music" ></a>
+			<a class="link" id="toplink_shows" ></a>
+			<a class="link" id="toplink_facebook" ></a>
+			<a class="link" id="toplink_itunes" ></a>
+			<a class="link" id="toplink_bio" ></a>
+			<a class="link" id="toplink_photos" ></a>
+		</div>
 
-        <div id="player">
-			<div id="flashContent">
-				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="306" height="246" id="lillywolf_player" align="middle">
-					<param name="movie" value="swfs/musicplayer/lillywolf_player.swf" />
-					<param name="quality" value="high" />
-					<param name="bgcolor" value="#000000" />
-					<param name="play" value="true" />
-					<param name="loop" value="true" />
-					<param name="wmode" value="window" />
-					<param name="scale" value="showall" />
-					<param name="menu" value="true" />
-					<param name="devicefont" value="false" />
-					<param name="salign" value="" />
-					<param name="allowScriptAccess" value="sameDomain" />
-					<!--[if !IE]>-->
-					<object type="application/x-shockwave-flash" data="swfs/musicplayer/lillywolf_player.swf" width="306" height="246">
+		<div id="body_content">
+	        <div id="player">
+				<div id="flashContent">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="306" height="246" id="lillywolf_player" align="middle">
 						<param name="movie" value="swfs/musicplayer/lillywolf_player.swf" />
 						<param name="quality" value="high" />
-						<param name="bgcolor" value="#000000" />
+						<!--param name="bgcolor" value="#000000" /-->
 						<param name="play" value="true" />
 						<param name="loop" value="true" />
-						<param name="wmode" value="window" />
+						<param name="wmode" value="transparent" />
 						<param name="scale" value="showall" />
 						<param name="menu" value="true" />
 						<param name="devicefont" value="false" />
 						<param name="salign" value="" />
 						<param name="allowScriptAccess" value="sameDomain" />
-					<!--<![endif]-->
-						<a href="http://www.adobe.com/go/getflash">
-							<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-						</a>
-					<!--[if !IE]>-->
+						<!--[if !IE]>-->
+						<object type="application/x-shockwave-flash" data="swfs/musicplayer/lillywolf_player.swf" width="306" height="246">
+							<param name="movie" value="swfs/musicplayer/lillywolf_player.swf" />
+							<param name="quality" value="high" />
+							<!--param name="bgcolor" value="#000000" /-->
+							<param name="play" value="true" />
+							<param name="loop" value="true" />
+							<param name="wmode" value="transparent" />
+							<param name="scale" value="showall" />
+							<param name="menu" value="true" />
+							<param name="devicefont" value="false" />
+							<param name="salign" value="" />
+							<param name="allowScriptAccess" value="sameDomain" />
+						<!--<![endif]-->
+							<a href="http://www.adobe.com/go/getflash">
+								<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+							</a>
+						<!--[if !IE]>-->
+						</object>
+						<!--<![endif]-->
 					</object>
-					<!--<![endif]-->
-				</object>
-			</div>
-   		</div>
+				</div>
+	   		</div>
         
-        <div id="getting-started">
-		</div>
+	        <div id="twitter">
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 4,
+				  interval: 30000,
+				  width: 296,
+				  height: 300,
+				  theme: {
+				    shell: {
+				      background: '#00021a',
+				      color: '#ffffff'
+				    },
+				    tweets: {
+				      background: '#00021a',
+				      color: '#c2e5ff',
+				      links: '#ff0048'
+				    }
+				  },
+				  features: {
+				    scrollbar: false,
+				    loop: false,
+				    live: false,
+				    hashtags: true,
+				    timestamp: true,
+				    avatars: false,
+				    behavior: 'all'
+				  }
+				}).render().setUser('lillywolf_drnu').start();
+				</script>
+			</div>
+			
+			<div id="fb_stuff">
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) {return;}
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like-box" data-href="http://www.facebook.com/pages/Lilly-Wolf-and-Dr-Nu/262243687143250" data-width="302" data-show-faces="true" data-stream="true" data-header="false"></div>				
+			</div>
+
+			<div id="maintext">
+			</div>
+		</div>	
     
       </div>
       

@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style type="text/css" media="screen">
+      body {
+        padding: 0;
+        background-color: #000000;
+		background-image: url("images/bg.png");
+        background-repeat: no-repeat;	
+		background-position: 50% -317px;
+        font-family: "Verdana";
+        font-size: 13px;
+        color: #ffffff;
+      }
+
+	  #content a, #content a:hover {
+		text-decoration: none !important;
+		background-color: transparent;
+		cursor: pointer;
+	  }
+
+	  #page {
+		margin: 0 auto;
+	  }
+
+	  #content {
+		margin: 0 auto;
+	  }
+	
+	  #body_content {
+		margin: 80px auto;
+		text-align: center;
+		width: 850px;
+	  }
+	
+	  #left_bar {
+		width: 310px;
+		float: left;		
+	  }
+      
+      #player {
+        /* margin: 85px 0 0 200px; */
+      }
+
+	  #twitter {
+		clear: left;
+		margin: 45px 0 0 0;
+	  }
+      
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none !important;
+      }
+      
+      #logo {
+        margin: 30px auto;
+        width: 100%;
+		text-align: center;
+		height: 158px;
+		padding: 0 0 0 5px;
+      }
+      
+      #sidebar {
+        float: right;
+        width: 175px;
+      }
+
+	  #links {
+		margin: 0px auto;
+		width: 826px;
+		text-align: center;
+		height: 18px;
+	  }
+
+	  .link {
+		float: left;
+		height: 18px;
+	  }
+	
+	  #toplink_music {
+		background-image: url("images/links/link_music.png");
+		background-repeat: no-repeat;
+		width: 87px;
+		margin-left: 0px;
+	  }
+	
+	  #toplink_music:hover {
+		background-image: url("images/links/link_music_over.png");
+	  }	
+	
+	  #toplink_shows {
+		background-image: url("images/links/link_shows.png");
+		background-repeat: no-repeat;		
+		width: 97px;
+		margin-left: 45px;
+	  }	
+	
+	  #toplink_shows:hover {
+		background-image: url("images/links/link_shows_over.png");
+	  }	
+	
+	  #toplink_facebook {
+		background-image: url("images/links/link_facebook.png");
+		background-repeat: no-repeat;		
+		width: 145px;
+		margin-left: 52px;
+	  }
+
+	  #toplink_facebook:hover {
+		background-image: url("images/links/link_facebook_over.png");
+	  }
+	
+	  #toplink_itunes {
+		background-image: url("images/links/link_itunes.png");
+		background-repeat: no-repeat;		
+		width: 94px;
+		margin-left: 52px;
+	  }
+	
+	  #toplink_itunes:hover {
+		background-image: url("images/links/link_itunes_over.png");
+	  }		
+	
+	  #toplink_bio {
+		background-image: url("images/links/link_bio.png");
+		background-repeat: no-repeat;		
+		width: 44px;
+		margin-left: 57px;
+	  }	
+	
+	  #toplink_bio:hover {
+		background-image: url("images/links/link_bio_over.png");
+	  }	
+	
+	  #toplink_photos {
+		background-image: url("images/links/link_photos.png");
+		background-repeat: no-repeat;		
+		width: 108px;
+		margin-left: 45px;
+	  }	
+	
+	  #toplink_photos:hover {
+		background-image: url("images/links/link_photos_over.png");
+	  }	
+
+      #footer {
+        clear: both;
+      }   
+
+	  #maintext {
+		width: 500px;
+		float: right;
+	  } 
+
+	  .twtr-tweet-text, .twtr-hd {
+		font-family: Verdana, Arial, Helvetica !important;
+		font-size: 13px !important;
+	  }
+	
+	  .twtr-tweet {
+		padding: 4px 0;
+		border-bottom: 1px dotted #4AFFC3 !important;
+	  }
+	
+	  .twtr-tweet:last-child {
+		border-bottom-width: 0px !important;
+	  }
+	
+	  .twtr-join-conv {
+		margin-top: 4px;
+	  	font-size: 10px;
+	  }
+	
+	  .twtr-hd h4 a {
+		float: left;
+	    margin: 2px 0 0 0;	
+	  }
+
+	  .twtr-hd h3 {
+		color: #FF0049 !important;
+	  }
+      
+    </style>
+    <script type="text/javascript" src="javascripts/prototype.js"></script>
+    <script type="text/javascript" src="javascripts/effects.js"></script>
+    <script type="text/javascript">
+		
+		function xhrHandler(display) {
+		  if (this.readyState != 4) {
+		      return;
+		  }
+		  if (this.status != 200) {
+		      alert('Error!');
+		      return;
+		  }
+		  document.getElementById("maintext").innerHTML = this.responseText;
+		}
+		
+		function formatXHR(url) {
+		    var xhr = new XMLHttpRequest();
+		    xhr.onreadystatechange = xhrHandler;
+		    xhr.open("GET", url);
+		    xhr.send();			
+		}
+
+		function displayMusic() {
+		    url = "site/show_music";
+			formatXHR(url);
+		}
+		
+		function displayShows() {
+		    url = "site/show_shows";
+			formatXHR(url);
+		}
+		
+		function displayFacebook() {
+			window.open("http://www.facebook.com/pages/Lilly-Wolf-and-Dr-Nu/262243687143250");		
+		}	
+		
+		function displayItunes() {
+			url = "site/show_comingsoon"
+			formatXHR(url);
+		}	
+		
+		function displayBio() {
+			url = "site/show_comingsoon"
+			formatXHR(url);			
+		}
+		
+		function displayPhotos() {
+			url = "site/show_comingsoon"
+			formatXHR(url);			
+		}
+		
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="content">
+        <div id="logo">
+ 			<img src="images/logo.png" />
+        </div>
+		<div id="links">
+			<div class="link" id="toplink_music" onclick="displayMusic()" ></div>
+			<div class="link" id="toplink_shows" onclick="displayShows()" ></div>
+			<div class="link" id="toplink_facebook" onclick="displayFacebook()" ></div>
+			<div class="link" id="toplink_itunes" onclick="displayItunes()" ></div>
+			<div class="link" id="toplink_bio" onclick="displayBio()" ></div>
+			<div class="link" id="toplink_photos" onclick="displayPhotos()" ></div>
+		</div>
+
+		<div id="body_content">
+			<div id="left_bar">
+		        <div id="player">
+					<div id="flashContent">
+						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="306" height="246" id="lillywolf_player" align="middle">
+							<param name="movie" value= "/swfs/musicplayer/lillywolf_player.swf" />
+							<param name="quality" value="high" />
+							<!--param name="bgcolor" value="#000000" /-->
+							<param name="play" value="true" />
+							<param name="loop" value="true" />
+							<param name="wmode" value="transparent" />
+							<param name="scale" value="showall" />
+							<param name="menu" value="true" />
+							<param name="devicefont" value="false" />
+							<param name="salign" value="" />
+							<param name="allowScriptAccess" value="sameDomain" />
+							<!--[if !IE]>-->
+							<object type="application/x-shockwave-flash" data="/swfs/musicplayer/lillywolf_player.swf" width="306" height="246">
+								<param name="movie" value="/swfs/musicplayer/lillywolf_player.swf" />
+								<param name="quality" value="high" />
+								<!--param name="bgcolor" value="#000000" /-->
+								<param name="play" value="true" />
+								<param name="loop" value="true" />
+								<param name="wmode" value="transparent" />
+								<param name="scale" value="showall" />
+								<param name="menu" value="true" />
+								<param name="devicefont" value="false" />
+								<param name="salign" value="" />
+								<param name="allowScriptAccess" value="sameDomain" />
+							<!--<![endif]-->
+								<a href="http://www.adobe.com/go/getflash">
+									<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+								</a>
+							<!--[if !IE]>-->
+							</object>
+							<!--<![endif]-->
+						</object>
+					</div>
+		   		</div>
+        
+		        <div id="twitter">
+					<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+					<script>
+					new TWTR.Widget({
+					  version: 2,
+					  type: 'profile',
+					  rpp: 4,
+					  interval: 30000,
+					  width: 296,
+					  height: 300,
+					  theme: {
+					    shell: {
+					      background: '#00021a',
+					      color: '#ffffff'
+					    },
+					    tweets: {
+					      background: '#00021a',
+						  color: '#C4F9FF',
+					      links: '#FF0049'
+					    }
+					  },
+					  features: {
+					    scrollbar: false,
+					    loop: false,
+					    live: false,
+					    hashtags: true,
+					    timestamp: true,
+					    avatars: false,
+					    behavior: 'all'
+					  }
+					}).render().setUser('lillywolf_drnu').start();
+					</script>
+				</div>
+			</div>	
+
+			<div id="maintext">
+					
+			</div>				
+			
+						
+			</div>
+		</div>	
+    
+      </div>
+      
+      <div id="footer">&nbsp;</div>
+    </div>
+  </body>
+</html>
