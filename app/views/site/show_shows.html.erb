@@ -1,45 +1,14 @@
 <html>
-	<head>
-	    <style type="text/css" media="screen">
-		    #shows {
-		      	font-family: "Verdana";
-		      	font-size: 13px;
-		    	color: #ffffff;
-				margin: -18px 0 0 20px;
-		    }
-			.show {
-				clear: both;
-				float: left;
-				margin-top: 18px;
-			}
-			.date {
-				color: #FF0049;
-			}
-			.show_divider {
-				padding: 0px 10px;
-			}
-			.venue {
-				color: #4AFFC3;
-			}
-			.location {
-				
-			}
-			.line1 div, .line1 a, .line2 div {
-				float: left;
-				text-align: left;
-			}
-			.line1 {
-				clear: both;
-				float: left;
-			}
-			.line2 {
-				clear: both;
-				float: left;
-				margin: 2px 0 0 0;
-			}
-		</style>
-	</head>	
 	<body>
+		<style>
+			#toplink_shows {
+				background-image: url("images/links/link_shows_over.png");
+				width: 126px;
+				margin-left: 16px;
+				margin-top: -4px;
+				height: 24px;
+			}		
+		</style>
 		<div id="shows">
 			<% @shows.each do |show| %>
 				<div class="show">

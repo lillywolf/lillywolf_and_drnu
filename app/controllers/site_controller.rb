@@ -5,7 +5,7 @@ class SiteController < ApplicationController
   end  
   
   def show_music
-    @songs = Song.all
+    @songs = Song.all.reverse
   end
 
   def show_shows

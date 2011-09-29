@@ -4,185 +4,288 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <style type="text/css" media="screen">
-      body {
-        padding: 0;
-        background-color: #000000;
-		background-image: url("images/bg.png");
-        background-repeat: no-repeat;	
-		background-position: 50% -317px;
-        font-family: "Verdana";
-        font-size: 13px;
-        color: #ffffff;
-      }
+		body {
+			padding: 0;
+			background-color: #000000;
+			background-image: url("images/bg.png");
+			background-repeat: no-repeat;	
+			background-position: 50% -317px;
+			font-family: "Verdana";
+			font-size: 13px;
+			color: #ffffff;
+		}
+		
+		a img, img:link, img:visited, img:hover, a:link, a:visited, a:hover {
+			text-decoration: none !important;
+			background-color: transparent;
+			border: 0px;
+			cursor: pointer;			
+		}
 
-	  #content a, #content a:hover {
-		text-decoration: none !important;
-		background-color: transparent;
-		cursor: pointer;
-	  }
+		#content a, #content a:hover {
+			text-decoration: none !important;
+			background-color: transparent;
+			cursor: pointer;
+		}
 
-	  #page {
-		margin: 0 auto;
-	  }
+		#page {
+			margin: 0 auto;
+		}
 
-	  #content {
-		margin: 0 auto;
-	  }
-	
-	  #body_content {
-		margin: 80px auto;
-		text-align: center;
-		width: 850px;
-	  }
-	
-	  #left_bar {
-		width: 310px;
-		float: left;		
-	  }
-      
-      #player {
-        /* margin: 85px 0 0 200px; */
-      }
+		#content {
+			margin: 0 auto;
+		}
 
-	  #twitter {
-		clear: left;
-		margin: 45px 0 0 0;
-	  }
-      
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none !important;
-      }
-      
-      #logo {
-        margin: 30px auto;
-        width: 100%;
-		text-align: center;
-		height: 158px;
-		padding: 0 0 0 5px;
-      }
-      
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
+		#body_content {
+			margin: 80px auto;
+			text-align: center;
+			width: 850px;
+		}
 
-	  #links {
-		margin: 0px auto;
-		width: 826px;
-		text-align: center;
-		height: 18px;
-	  }
+		#left_bar {
+			width: 310px;
+			float: left;		
+		}
 
-	  .link {
-		float: left;
-		height: 18px;
-	  }
-	
-	  #toplink_music {
-		background-image: url("images/links/link_music.png");
-		background-repeat: no-repeat;
-		width: 87px;
-		margin-left: 0px;
-	  }
-	
-	  #toplink_music:hover {
-		background-image: url("images/links/link_music_over.png");
-	  }	
-	
-	  #toplink_shows {
-		background-image: url("images/links/link_shows.png");
-		background-repeat: no-repeat;		
-		width: 97px;
-		margin-left: 45px;
-	  }	
-	
-	  #toplink_shows:hover {
-		background-image: url("images/links/link_shows_over.png");
-	  }	
-	
-	  #toplink_facebook {
-		background-image: url("images/links/link_facebook.png");
-		background-repeat: no-repeat;		
-		width: 145px;
-		margin-left: 52px;
-	  }
+		#player {
+			/* margin: 85px 0 0 200px; */
+		}
 
-	  #toplink_facebook:hover {
-		background-image: url("images/links/link_facebook_over.png");
-	  }
-	
-	  #toplink_itunes {
-		background-image: url("images/links/link_itunes.png");
-		background-repeat: no-repeat;		
-		width: 94px;
-		margin-left: 52px;
-	  }
-	
-	  #toplink_itunes:hover {
-		background-image: url("images/links/link_itunes_over.png");
-	  }		
-	
-	  #toplink_bio {
-		background-image: url("images/links/link_bio.png");
-		background-repeat: no-repeat;		
-		width: 44px;
-		margin-left: 57px;
-	  }	
-	
-	  #toplink_bio:hover {
-		background-image: url("images/links/link_bio_over.png");
-	  }	
-	
-	  #toplink_photos {
-		background-image: url("images/links/link_photos.png");
-		background-repeat: no-repeat;		
-		width: 108px;
-		margin-left: 45px;
-	  }	
-	
-	  #toplink_photos:hover {
-		background-image: url("images/links/link_photos_over.png");
-	  }	
+		#twitter {
+			clear: left;
+			margin: 45px 0 0 0;
+		}
 
-      #footer {
-        clear: both;
-      }   
+		a:hover {
+			background-color: #03c;
+			color: white;
+			text-decoration: none !important;
+		}
 
-	  #maintext {
-		width: 500px;
-		float: right;
-	  } 
+		#logo {
+			margin: 30px auto;
+			width: 100%;
+			text-align: center;
+			height: 158px;
+			padding: 0 0 0 5px;
+		}
 
-	  .twtr-tweet-text, .twtr-hd {
-		font-family: Verdana, Arial, Helvetica !important;
-		font-size: 13px !important;
-	  }
-	
-	  .twtr-tweet {
-		padding: 4px 0;
-		border-bottom: 1px dotted #4AFFC3 !important;
-	  }
-	
-	  .twtr-tweet:last-child {
-		border-bottom-width: 0px !important;
-	  }
-	
-	  .twtr-join-conv {
-		margin-top: 4px;
-	  	font-size: 10px;
-	  }
-	
-	  .twtr-hd h4 a {
-		float: left;
-	    margin: 2px 0 0 0;	
-	  }
+		#sidebar {
+			float: right;
+			width: 175px;
+		}
 
-	  .twtr-hd h3 {
-		color: #FF0049 !important;
-	  }
-      
+		#links {
+			margin: 0px auto;
+			width: 900px;
+			text-align: center;
+			height: 18px;
+			padding-top: 1px;
+		}
+
+		.link {
+			float: left;
+			height: 18px;
+		}
+		
+		.link:hover {
+			margin-top: -4px;
+			height: 24px;			
+		}
+
+		#toplink_music {
+			background-image: url("images/links/link_music.png");
+			background-repeat: no-repeat;
+			width: 83px;
+			margin-left: 15px;
+		}
+
+		#toplink_music:hover {
+			background-image: url("images/links/link_music_over.png");
+			width: 113px;
+			margin-left: -15px;
+		}	
+
+		#toplink_shows {
+			background-image: url("images/links/link_shows.png");
+			background-repeat: no-repeat;		
+			width: 97px;
+			margin-left: 45px;
+		}	
+
+		#toplink_shows:hover {
+			background-image: url("images/links/link_shows_over.png");
+			width: 126px;
+			margin-left: 16px;
+		}	
+
+		#toplink_facebook {
+			background-image: url("images/links/link_facebook.png");
+			background-repeat: no-repeat;		
+			width: 145px;
+			margin-left: 48px;
+		}
+
+		#toplink_facebook:hover {
+			background-image: url("images/links/link_facebook_over.png");
+			width: 175px;
+			margin-left: 18px;		
+		}
+
+		#toplink_itunes {
+			background-image: url("images/links/link_itunes.png");
+			background-repeat: no-repeat;		
+			width: 94px;
+			margin-left: 52px;
+		}
+
+		#toplink_itunes:hover {
+			background-image: url("images/links/link_itunes_over.png");
+		}		
+
+		#toplink_bio {
+			background-image: url("images/links/link_bio.png");
+			background-repeat: no-repeat;		
+			width: 44px;
+			margin-left: 57px;
+		}	
+
+		#toplink_bio:hover {
+			background-image: url("images/links/link_bio_over.png");
+		}	
+
+		#toplink_photos {
+			background-image: url("images/links/link_photos.png");
+			background-repeat: no-repeat;		
+			width: 109px;
+			margin-left: 47px;
+		}	
+
+		#toplink_photos:hover {
+			background-image: url("images/links/link_photos_over.png");
+			width: 140px;
+			margin-left: 16px;
+		}
+		
+		#toplink_shop {
+			background-image: url("images/links/link_shop.png");
+			background-repeat: no-repeat;		
+			width: 72px;
+			margin-left: 45px;
+		}	
+
+		#toplink_shop:hover {
+			background-image: url("images/links/link_shop_over.png");
+			width: 104px;
+			margin-left: 13px;	
+			margin-top: -3px;		
+		}			
+		
+		#toplink_contact {
+			background-image: url("images/links/link_contact.png");
+			background-repeat: no-repeat;		
+			width: 129px;
+			margin-left: 45px;
+		}	
+
+		#toplink_contact:hover {
+			background-image: url("images/links/link_contact_over.png");
+			width: 158px;
+			margin-left: 16px;			
+		}		
+
+		#footer {
+			clear: both;
+		}   
+
+		#maintext {
+			width: 500px;
+			float: right;
+		} 
+
+		.twtr-tweet-text, .twtr-hd {
+			font-family: Verdana, Arial, Helvetica !important;
+			font-size: 13px !important;
+		}
+
+		.twtr-tweet {
+			padding: 4px 0;
+			border-bottom: 1px dotted #4AFFC3 !important;
+		}
+
+		.twtr-tweet:last-child {
+			border-bottom-width: 0px !important;
+		}
+
+		.twtr-join-conv {
+			margin-top: 4px;
+			font-size: 10px;
+		}
+
+		.twtr-hd h4 a {
+			float: left;
+			margin: 2px 0 0 0;	
+		}
+
+		.twtr-hd h3 {
+			color: #FF0049 !important;
+		}
+	
+		#songs {
+			margin-top: -25px;
+		}
+		.song {
+			float: left;
+			margin: 25px 0 0 0;
+		}
+		.title {
+			text-align: left;
+			float: left;
+			margin: 0 0 8px 0px;
+		}
+		.title a {
+			color: #4AFFC3;
+		}
+		.fb_like {
+			float: left;
+			margin: 10px 0 0 0;
+		}	
+	    #shows {
+	      	font-family: "Verdana";
+	      	font-size: 13px;
+	    	color: #ffffff;
+			margin: -18px 0 0 20px;
+	    }
+		.show {
+			clear: both;
+			float: left;
+			margin-top: 18px;
+		}
+		.date {
+			color: #FF0049;
+		}
+		.show_divider {
+			padding: 0px 10px;
+		}
+		.venue {
+			color: #4AFFC3;
+		}
+		.location {
+			
+		}
+		.line1 div, .line1 a, .line2 div {
+			float: left;
+			text-align: left;
+		}
+		.line1 {
+			clear: both;
+			float: left;
+		}
+		.line2 {
+			clear: both;
+			float: left;
+			margin: 2px 0 0 0;
+		}      
     </style>
     <script type="text/javascript" src="javascripts/prototype.js"></script>
     <script type="text/javascript" src="javascripts/effects.js"></script>
@@ -200,7 +303,16 @@
 			var newdiv = document.createElement("div");
 			newdiv.innerHTML = this.responseText;
 			var container = document.getElementById("maintext");
-			container.appendChild(newdiv);				
+			container.appendChild(newdiv);	
+			
+			var tags = document.getElementById('maintext').getElementsByTagName("script");
+			var len = tags.length;
+			for (var x = 0; x < len; x++) {
+				var newScript = document.createElement('script');
+				newScript.type = "text/javascript";
+				newScript.text = tags[x].text;
+				document.getElementById('maintext').appendChild(newScript);	
+			}						
 		}
 		
 		function cleanMaintext() {
@@ -254,15 +366,15 @@
     <div id="page">
       <div id="content">
         <div id="logo">
- 			<img src="images/logo.png" />
+ 			<a href="site"><img src="images/logo.png" /></a>
         </div>
 		<div id="links">
 			<div class="link" id="toplink_music" onclick="displayMusic()" ></div>
 			<div class="link" id="toplink_shows" onclick="displayShows()" ></div>
 			<div class="link" id="toplink_facebook" onclick="displayFacebook()" ></div>
-			<div class="link" id="toplink_itunes" onclick="displayItunes()" ></div>
-			<div class="link" id="toplink_bio" onclick="displayBio()" ></div>
-			<div class="link" id="toplink_photos" onclick="displayPhotos()" ></div>
+			<div class="link" id="toplink_photos" onclick="displayItunes()" ></div>
+			<div class="link" id="toplink_shop" onclick="displayBio()" ></div>
+			<div class="link" id="toplink_contact" onclick="displayPhotos()" ></div>
 		</div>
 
 		<div id="body_content">
@@ -341,7 +453,8 @@
 			</div>	
 
 			<div id="maintext">
-					
+				<% @songs = Song.all.reverse %>
+				<%= render :partial => "music", :locals => { :songs => @songs } %>
 			</div>				
 			
 						
