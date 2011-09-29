@@ -189,17 +189,30 @@
     <script type="text/javascript">
 		
 		function xhrHandler(display) {
-		  if (this.readyState != 4) {
-		      return;
-		  }
-		  if (this.status != 200) {
-		      alert('Error!');
-		      return;
-		  }
-		  document.getElementById("maintext").innerHTML = this.responseText;
+			if (this.readyState != 4) {
+			    return;
+			}
+			if (this.status != 200) {
+			    alert('Error!');
+			    return;
+			}			
+			
+			var newdiv = document.createElement("div");
+			newdiv.innerHTML = this.responseText;
+			var container = document.getElementById("maintext");
+			container.appendChild(newdiv);				
+		}
+		
+		function cleanMaintext() {
+			while (document.getElementById("maintext").childNodes[0]) {
+				var c = document.getElementById("maintext").childNodes[0];
+				document.getElementById("maintext").removeChild(c);
+			}
+			// document.getElementById("maintext").update();
 		}
 		
 		function formatXHR(url) {
+			cleanMaintext();
 		    var xhr = new XMLHttpRequest();
 		    xhr.onreadystatechange = xhrHandler;
 		    xhr.open("GET", url);
